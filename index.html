@@ -4,37 +4,35 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Théo Profile</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+  <title>Théo</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <div class="card">
-      <h1>Hi, I'm Théo</h1>
-      <img src="images/1655806999921.jpg" alt="Photo de profil Théo">
-      <p>Apprenti développeur</p>
-      <a href="#">Ze parti !</a>
+  <div class="container">  
+    <img id="background" src="images/pistev7.png" alt="piste">
+    <img id="me" src="images/skieur.png" class="rotate" alt="skieur">
+    <img id="blood" src="images/ink-303244.png" alt="sang">
+    <div id="personal_infos">
+      <p>Salut, moi c'est Théo , j'ai 26 ans et je viens de Lyon.</p>
     </div>
-    <div class="card">
-      <h2>Rollerblade</h2>
-      <p>They see me rolliiiiin', they hatiiiiin'</p>
+    <div id="professional_infos">
+      <p>J'ai été 3 ans pompier volontaire, travaillé en tant qu'administrateur systèmes et réseaux ainsi qu'ingénieur méthodes.</p>
     </div>
-    <div class="card">
-      <h2>Dub Music</h2>
-      <p>Jah Rastafari</p>
-    </div>
-    <div class="card">
-      <h2>Social Links</h2>
-      <ul>
-        <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-      </ul>
+    <div id="hobbies_infos">
+      <p>J'aime le roller, le dub et surtout la bière.</p>
     </div>
   </div>
+  <script>
+    window.addEventListener('scroll', function(e) {
+      if (window.scrollY >= 1550) {
+        document.getElementById('me').classList.add('fall');
+        setTimeout(() => {document.getElementById('blood').style.display="block";}, 5000);
+      };
+    });
+  </script>
 </body>
+
 </html>
