@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Théo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">  
+    <img id="background" src="images/pistev7.png" alt="piste">
+    <img id="me" src="images/skieur.png" class="rotate" alt="skieur">
+    <img id="blood" src="images/ink-303244.png" alt="sang">
+    <div id="personal_infos">
+      <p>Salut, moi c'est Théo , j'ai 26 ans et je viens de Lyon.</p>
+    </div>
+    <div id="professional_infos">
+      <p>J'ai été 3 ans pompier volontaire, travaillé en tant qu'administrateur systèmes et réseaux ainsi qu'ingénieur méthodes.</p>
+    </div>
+    <div id="hobbies_infos">
+      <p>J'aime le roller, le dub et surtout la bière.</p>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('scroll', function(e) {
+      if (window.scrollY >= 1550) {
+        document.getElementById('me').classList.add('fall');
+        setTimeout(() => {document.getElementById('blood').style.display="block";}, 5000);
+      };
+    });
+  </script>
+</body>
+
+</html>
